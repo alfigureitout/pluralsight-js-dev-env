@@ -13,7 +13,7 @@ describe('index.html', () => {
         const index = fs.readFileSync('./src/index.html', "utf-8");
         jsdom.env(index, function(err, window) {
             const h1 = window.document.getElementsByTagName('h1')[0];
-            expect(h1.innerHTML).to.equal("There are so many things I haven't done");
+            expect(h1.innerHTML).to.equal("There are a million things I haven't done");
             done();
             window.close();
         });
